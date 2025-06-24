@@ -52,3 +52,15 @@ export default tseslint.config({
   },
 })
 ```
+
+## Deploying to GitHub Pages
+
+Set the `BASE_URL` environment variable when building so assets work from the project subpath.
+Then run:
+
+```bash
+# build with correct base
+BASE_URL=/your-repo/ npm run predeploy
+# publish to gh-pages
+npm run deploy
+```
