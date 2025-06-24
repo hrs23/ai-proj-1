@@ -36,3 +36,36 @@ adjust these times with the `--work` and `--rest` options (values are minutes).
 ```bash
 python todo.py pomodoro 1 --work 25 --rest 5
 ```
+
+## Web App (TypeScript)
+
+This project also provides a simple Express-based web API written in TypeScript.
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development mode
+
+```bash
+npm run dev
+```
+
+### Build and run
+
+```bash
+npm run build
+npm start
+```
+
+The server exposes the following endpoints:
+
+- `GET /tasks` - list all tasks
+- `POST /tasks` - add a new task (JSON body `{ "description": "..." }`)
+- `PUT /tasks/:index/done` - mark the specified task as completed
+- `DELETE /tasks/:index` - remove a task
+- `POST /tasks/:index/pomodoro?work=25&rest=5` - start a Pomodoro timer for the task
+
+Tasks are stored in `tasks.json` in the project root.
